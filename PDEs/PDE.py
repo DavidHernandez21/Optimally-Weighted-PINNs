@@ -325,7 +325,7 @@ class PDENeuralNetwork:
         for i in range(len(x)):
             if isinstance(x[i], tuple):
 #                 xInt.append(np.linspace(x[i][0], x[i][1], pointCount))
-                xInt.append(np.linspace(x[i][0], x[i][1], pointCount, dtype=np.float64))
+                xInt.append(np.linspace(x[i][0], x[i][1], np.int_(pointCount), dtype=np.float64))
                     
 
             else:
