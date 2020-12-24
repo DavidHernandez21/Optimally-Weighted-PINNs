@@ -7,7 +7,7 @@ from Scripts.main_laplace_2d import main as main_laplace_2d
 from Scripts.main_laplace_nd import main as main_laplace_nd
 
 
-print(matplotlib.rcParams['backend'])
+print(plt.rcParams['backend'])
 plt.rcParams.update({'font.size': 16})
 plt.rcParams['figure.figsize'] = [10, 7]
 rc('text', usetex=True)
