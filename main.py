@@ -4,11 +4,12 @@ from matplotlib import rc
 from Scripts.main_laplace_2d import main as main_laplace_2d
 from Scripts.main_laplace_nd import main as main_laplace_nd
 
-%matplotlib inline
 
 plt.rcParams.update({'font.size': 16})
 rc('text', usetex=True)
 rc('font', **{'family': 'serif', 'serif': ['Computer Modern Roman']})
 
 main_laplace_2d()
+
+plt.show()
 # main_laplace_nd()
