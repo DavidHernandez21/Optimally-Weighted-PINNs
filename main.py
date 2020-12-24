@@ -10,7 +10,6 @@ plt.rcParams['figure.figsize'] = [10, 7]
 rc('text', usetex=True)
 rc('font', **{'family': 'serif', 'serif': ['Computer Modern Roman']})
 
-plt.show()
 
 main_laplace_2d()
 
