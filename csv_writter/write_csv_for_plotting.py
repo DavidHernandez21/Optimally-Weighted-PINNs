@@ -1,6 +1,6 @@
 import csv
 
-def csv_plot_3d_or_2d(x, y, z=z, csv_name='surface_plot_3d.csv', single_plot=False):
+def csv_plot_3d_or_2d(x, y, z=None, csv_name='surface_plot_3d.csv', single_plot=False):
 	"""
 	writes a csv file with the x, y and if given z values obtained from the laplace object
 
