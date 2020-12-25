@@ -55,6 +55,6 @@ def csv_plot_3d_or_2d(x, y, z=z, csv_name='surface_plot_3d.csv', single_plot=Fal
 
 			for x, y in zip(x, y):
 
-				row = {key_x[0]: x, key_y[0]: y, key_z[0]: z}
+				row = {key_x[0]: x, key_y[0]: y}
 
 				csv_writer.writerow(row)
