@@ -47,7 +47,9 @@ def csv_plot_3d_or_2d(x, y, z=None, csv_name='surface_plot_3d.csv', single_plot=
 
 			for x, y, z in zip(x, y, z):
 
-				row = {key_x[0]: x, key_y[0]: y, key_z[0]: z}
+				row = {key_x[0]: ["{},".format(x_i) if j < last_index else "{}".format(x_i) for j, x_i in enumerate(x)], 
+				       key_y[0]: ["{},".format(y_i) if j < last_index else "{}".format(y_i) for j, y_i in enumerate(y)], 
+				       key_z[0]: ["{},".format(z_i) if j < last_index else "{}".format(z_i) for j, z_i in enumerate(z)]}
 
 				csv_writer.writerow(row)
 
