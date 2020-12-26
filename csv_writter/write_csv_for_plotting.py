@@ -44,6 +44,8 @@ def csv_plot_3d_or_2d(x, y, z=None, csv_name='surface_plot_3d.csv', single_plot=
 
 		
 		if not single_plot:
+			
+			last_index = len(x) -1
 
 			for x, y, z in zip(x, y, z):
 
