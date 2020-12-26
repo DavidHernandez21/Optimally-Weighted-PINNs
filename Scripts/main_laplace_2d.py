@@ -6,6 +6,7 @@ from PDEs.Laplace_2d import Laplace_2d
 from Enums import ActivationFunction, TrainMode
 from csv_writter.write_csv_for_plotting import csv_plot_3d_or_2d
 from utilities.plotting import savefig
+from os.path import join
 
 
 def main():
@@ -48,7 +49,7 @@ def main():
     for i in range(1, len(x)):
         ax.plot3D(x[i], y[i], z[i], color=color)
         
-    savefig("figures/surface_plot")
+    savefig(join("figures", "surface_plot"))
 
     # Single boundary plot
     plt.figure()
@@ -65,7 +66,7 @@ def main():
     plt.ylabel("$u$")
     plt.legend()
     
-    savefig("figures/single_boundary_plot")
+    savefig(join("figures", "single_boundary_plot"))
 
     plt.show()
     # endregion
