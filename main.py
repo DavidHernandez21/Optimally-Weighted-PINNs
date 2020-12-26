@@ -10,7 +10,8 @@ from Scripts.main_laplace_nd import main as main_laplace_nd
 # print(plt.rcParams['backend'])
 plt.rcParams.update({'font.size': 16})
 plt.rcParams['figure.figsize'] = [10, 7]
-rc('text', usetex=True)
+rc('text', usetex=False)
+print(plt.rcParams['text.usetex'])
 rc('font', **{'family': 'serif', 'serif': ['Computer Modern Roman']})
 
 
