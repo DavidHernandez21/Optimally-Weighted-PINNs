@@ -4,6 +4,7 @@ from mpl_toolkits.mplot3d import Axes3D
 from NeuralNetwork import NeuralNetwork
 from PDEs.Laplace_nd import Laplace_nd
 from Enums import ActivationFunction, TrainMode
+from utilities.plotting import savefig
 
 
 def main():
@@ -38,6 +39,7 @@ def main():
     ax.set_xlabel("$x_1$")
     ax.set_ylabel("$x_2$")
     ax.set_zlabel("$u$")
+    savefig("figures/interior_x_1_0_approx")
 
     # Plot analytical solution at x_1 = 0
     fig = plt.figure()
@@ -47,6 +49,7 @@ def main():
     ax.set_xlabel("$x_1$")
     ax.set_ylabel("$x_2$")
     ax.set_zlabel("$u$")
+    savefig("figures/interior_x_1_0_analytical")
 
     # Plot boundary condition at x_1 = 0
     fig = plt.figure()
@@ -56,6 +59,7 @@ def main():
     ax.set_xlabel("$x_1$")
     ax.set_ylabel("$x_2$")
     ax.set_zlabel("$u$")
+    savefig("figures/boundary_x_1_0")
 
     # Plot solution and boundary conditions at x_3 = 0.5
     fig = plt.figure()
@@ -65,6 +69,7 @@ def main():
     ax.set_xlabel("$x_1$")
     ax.set_ylabel("$x_2$")
     ax.set_zlabel("$u$")
+    
 
     # Boundary conditions
     color = next(ax._get_lines.prop_cycler)['color']
@@ -72,6 +77,8 @@ def main():
     ax.plot3D(x[0], y[0], z[0], color=color, label="Boundary Condition")
     for i in range(1, len(x)):
         ax.plot3D(x[i], y[i], z[i], color=color)
+        
+    savefig("figures/interior_x_3_5_approx")
 
     plt.show()
     # endregion
