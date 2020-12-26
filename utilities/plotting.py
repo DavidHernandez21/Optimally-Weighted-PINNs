@@ -57,14 +57,14 @@ def newfig(width, nplots = 1):
     ax = fig.add_subplot(111)
     return fig, ax
 
-def savefig(filename, crop = True):
+def savefig(filename, crop = True, ext='png'):
     if crop == True:
 #        plt.savefig('{}.pgf'.format(filename), bbox_inches='tight', pad_inches=0)
-        plt.savefig('{}.pdf'.format(filename), bbox_inches='tight', pad_inches=0)
+        plt.savefig('{}.{}'.format(filename, ext), bbox_inches='tight', pad_inches=0)
         plt.savefig('{}.eps'.format(filename), bbox_inches='tight', pad_inches=0)
     else:
 #        plt.savefig('{}.pgf'.format(filename))
-        plt.savefig('{}.pdf'.format(filename))
+        plt.savefig('{}.{}'.format(filename, ext))
         plt.savefig('{}.eps'.format(filename))
 
 ## Simple plot
