@@ -5,6 +5,7 @@ from NeuralNetwork import NeuralNetwork
 from PDEs.Laplace_2d import Laplace_2d
 from Enums import ActivationFunction, TrainMode
 from csv_writter.write_csv_for_plotting import csv_plot_3d_or_2d
+from utilities.plotting import savefig
 
 
 def main():
@@ -46,6 +47,8 @@ def main():
     ax.plot3D(x[0], y[0], z[0], color=color, label="Boundary Condition")
     for i in range(1, len(x)):
         ax.plot3D(x[i], y[i], z[i], color=color)
+        
+    savefig("figures/surface_plot")
 
     # Single boundary plot
     plt.figure()
@@ -61,6 +64,8 @@ def main():
     plt.xlabel("$x_1$")
     plt.ylabel("$u$")
     plt.legend()
+    
+    savefig("figures/single_boundary_plot")
 
     plt.show()
     # endregion
